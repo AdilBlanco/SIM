@@ -17,7 +17,7 @@ object sim {
     val conf = new SparkConf().setAppName("SIMDataAnalysis").setMaster("local[1]")
     val sc = new SparkContext(conf)
     val sqlContext = new SQLContext(sc)
-    sc.setLogLevel("OFF")
+    sc.setLogLevel("OFF") //Spark blalala off
 
     val caserneTxt = sc.parallelize(
       IOUtils.toString(
